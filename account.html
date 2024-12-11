@@ -1,0 +1,791 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Exevors DLS -&gt; личный кабинет</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <link href="images/favicon.png" rel="icon">
+    <link href="images/apple-touch-icon.png" rel="apple-touch-icon">
+	<link href="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/snow.min.css" rel="stylesheet">
+
+    <!-- Custom Font -->
+    <style>
+        @font-face {
+            font-family: 'Gilroy';
+            src: url('fonts/Gilroy-SemiBold.ttf') format('truetype');
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Gilroy', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+        }
+    </style>
+
+
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/aos.css" rel="stylesheet">
+    <link href="css/glightbox.min.css" rel="stylesheet">
+    <link href="css/swiper-bundle.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body class="index-page" data-aos-easing="ease-in-out" data-aos-duration="600" data-aos-delay="0">
+<!-- Header -->
+<script src="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/Snow.min.js"></script>
+<script>
+	new Snow ();
+</script>
+<header id="header" class="header d-flex align-items-center fixed-top" style="background: rgba(48, 48, 48, 0.1); backdrop-filter: blur(25px);">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
+            <img src="images/logo.png" alt="">
+            <h1 class="sitename" style="color: #ffffff;">Exevors DLS    </h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="index.html#" style="color: #ffffff; font-weight: bold;">Главная</a></li>
+                <li><a href="index.html#footer" style="color: #ffffff; font-weight: bold;">Документы</a></li>
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <a class="btn-getstarted flex-md-shrink-0" href="index.html">Выйти</a>
+
+    </div>
+</header>
+
+
+<style>
+    .container {
+        max-width: 1200px;
+        margin: 10% auto;
+    }
+    .profile-header {
+        background: linear-gradient(135deg, #c50000 0%, rgba(170, 0, 0, 0.5) 100%);
+        color: white;
+        padding: 40px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 4px 20px rgba(255, 4, 4, 0.3);
+        position: relative;
+    }
+    .profile-header img {
+        border-radius: 50%;
+        border: 5px solid rgba(255, 255, 255, 0.1);
+        margin-bottom: 15px;
+        transition: transform 0.3s ease-in-out;
+    }
+    .profile-header img:hover {
+        transform: scale(1.1);
+    }
+    .profile-header h1 {
+        font-size: 28px;
+        margin-bottom: 5px;
+    }
+    .profile-header p {
+        margin: 0;
+        font-size: 16px;
+        color: #cfcfcf;
+    }
+    .nav-tabs {
+        margin-bottom: 20px;
+        border-bottom: none;
+        margin-top: 20px;
+    }
+    .nav-tabs .nav-link {
+        color: #999;
+        border: none;
+        padding: 12px 20px;
+        margin: 10px 5px;
+        background-color: #252627;
+        border-radius: 12px;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
+    .nav-tabs .nav-link.active {
+        background-color: #BE0000;
+        color: white;
+    }
+    .nav-link:hover {
+        color: white;
+        background-color: #BE0000;
+    }
+    .tab-content {
+        border-radius: 20px;
+    }
+    .tab-content h3 {
+        color: #a6a6a6;
+    }
+    .tab-content p, .tab-content ul, .tab-content li, .tab-content form {
+        color: #d1d1d1;
+    }
+    .form-label {
+        color: #bbb;
+    }
+    .form-control {
+        background-color: #333;
+        color: #e0e0e0;
+        border: 1px solid #444;
+    }
+    .form-control:focus {
+        background-color: #444;
+        color: #e0e0e0;
+        border-color: #BE0000;
+        box-shadow: none;
+    }
+    .data-card {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 15px;
+        padding: 20px;
+        margin-bottom: 20px;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    .data-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+    .data-card h4 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: #c9d1d9;
+    }
+    .data-card p {
+        font-size: 15px;
+        color: #8b949e;
+        margin-bottom: 5px;
+    }
+    .data-card i {
+        font-size: 24px;
+        margin-right: 10px;
+        color: #BE0000;
+    }
+    .btn-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .btn-download {
+        padding: 5px 15px;
+        font-size: 14px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    .activation-key-form, .change-password-form, .fromStyle {
+        margin-top: 20px;
+        padding: 25px;
+        border-radius: 15px;
+        background: rgba(255, 255, 255, 0.05);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .activation-key-form h4, .change-password-form h4 .fromStyle h4 {
+        font-size: 22px;
+        color: #ffffff;
+    }
+
+    .form-control {
+        margin-bottom: 15px;
+        color: #ffffff;
+        outline: none;
+        border: none;
+        background: rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        padding: 10px;
+        font-size: 16px;
+
+    }
+    .form-control:focus{
+        background: rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        color: #ffffff;
+        border-radius: 8px;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+
+
+    .activation-key-form input::placeholder, .change-password-form input::placeholder .fromStyle::placeholder {
+        color: #aaa;
+    }
+
+    .activation-key-form button, .change-password-form button, .fromStyle button {
+        width: 200px;
+        padding: 4px;
+        font-size: 16px;
+        background-color: #BE0000;
+        border: none;
+        border-radius: 8px;
+        color: #ffffff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .activation-key-form button:hover, .change-password-form button:hover, .fromStyle button:hover {
+        background-color: #990000;
+    }
+
+    .activation-key-form .form-group, .change-password-form .form-group, .fromStyle .form-group {
+        margin-bottom: 20px;
+    }
+
+
+    input[type=file]::file-selector-button {
+        margin-left: 1px;
+        border-radius: 6px;
+    }
+
+
+</style>
+
+
+<header><div>
+
+
+</div>
+</header>
+
+<div class="container aos-init aos-animate" data-aos="fade-out">
+    <div class="profile-header mt-5">
+        <img src="images/head.png" data-aos="zoom-in" class="aos-init aos-animate">
+        <h1 data-aos="zoom-out" class="aos-init aos-animate">Greufs</h1>
+        <p data-aos="zoom-out" class="aos-init aos-animate">Email: greufs@exevorsdls.com</p>    
+        <p data-aos="zoom-out" class="aos-init aos-animate">UID: 0</p>
+    </div>
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="overview-tab" data-bs-toggle="tab" data-bs-target="#overview-content" type="button" role="tab" aria-controls="overview-content" aria-selected="true">Аккаунт</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="purchase-tab" data-bs-toggle="tab" data-bs-target="#purchase-content" type="button" role="tab" aria-controls="purchase-content" aria-selected="false" tabindex="-1">Покупка клиента</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings-content" type="button" role="tab" aria-controls="settings-content" aria-selected="false" tabindex="-1">Дополнительно</button>
+        </li>
+
+    </ul>
+
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="overview-content" role="tabpanel" aria-labelledby="overview-tab">
+            <h3>Обзор аккаунта</h3>
+
+            <div class="data-card">
+                <h4>
+                    Статус аккаунта
+                </h4>
+
+
+
+
+                <div>
+                    <p></p>
+                    <div class="btn-container">
+                        <p style="color: rgb(255 83 83); text-shadow: 0 0 16px rgb(255 38 38 / 70%);">Истекает: 05.10.2099 04:39</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="data-card">
+                <h4>
+                    Дата регистрации
+                </h4>
+                <p>10.11.2024 16:21</p>
+            </div>
+
+
+            <div class="data-card">
+                <h4>
+                    Логин
+                </h4>
+                <p>Greufs</p>
+            </div>
+
+            <div class="data-card">
+                <h4>
+                    Роль
+                </h4>
+                <p>Developer</p>
+            </div>
+
+            <div class="data-card">
+                <h4>
+                    HWID
+                </h4>
+                <p>9d61de1ad6a4a35861106a9e2b2d8468ab1182cb712a06dc563bb73679338ca2</p>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="purchase-content" role="tabpanel" aria-labelledby="purchase-tab">
+            <h3>Наши продукты</h3>
+            <div class="row row-cols-1 row-cols-xl-4 px-5 mb-4 mt-5 aos-init aos-animate" data-aos="zoom-out">
+
+
+
+
+                <div class="p-2">
+                    <div class="card rounded-4" style="background-color: #1E1E20;">
+                        <img class=" p-3 rounded-5" src="images/3.png" alt="...">
+                        <div class="p-3" style="margin-top: -20px">
+                            <p class="fw-bolder" style="height: 5px">LifeTime</p>
+
+                            <p>
+                                <span>Цена: </span>
+                                <span class="fw-bolder">499</span>
+                                <i class="fw-bolder bx bx-ruble text-success"></i>
+                            </p>
+                            <div class="text-center">
+                                <a class="btn btn-getstarted w-100 bi-bag-fill" href="/checkout?id=6" style="background-color: rgb(179, 0, 0); color: white;">
+                                    Купить
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="p-2">
+                    <div class="card rounded-4" style="background-color: #1E1E20;">
+                        <img class=" p-3 rounded-5" src="images/2.png" alt="...">
+                        <div class="p-3" style="margin-top: -20px">
+                            <p class="fw-bolder" style="height: 5px">Year</p>
+
+                            <p>
+                                <span>Цена: </span>
+                                <span class="fw-bolder">399</span>
+                                <i class="fw-bolder bx bx-ruble text-success"></i>
+                            </p>
+                            <div class="text-center">
+                                <a class="btn btn-getstarted w-100 bi-bag-fill" href="/checkout?id=6" style="background-color: rgb(179, 0, 0); color: white;">
+                                    Купить
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="p-2">
+                    <div class="card rounded-4" style="background-color: #1E1E20;">
+                        <img class="p-3 rounded-5" src="images/1.png" alt="...">
+                        <div class="p-3" style="margin-top: -20px">
+                            <p class="fw-bolder" style="height: 5px">Month</p>
+
+                            <p>
+                                <span>Цена: </span>
+                                <span class="fw-bolder">199</span>
+                                <i class="fw-bolder bx bx-ruble text-success"></i>
+                            </p>
+                            <div class="text-center">
+                                <a class="btn btn-getstarted w-100 bi-bag-fill" href="/checkout?id=6" style="background-color: rgb(179, 0, 0); color: white;">
+                                    Купить
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <div class="p-2">
+                    <div class="card rounded-4" style="background-color: #1E1E20;">
+                        <img class=" p-3 rounded-5" src="images/4.png" alt="...">
+                        <div class="p-3" style="margin-top: -20px">
+                            <p class="fw-bolder" style="height: 5px">Hwid Reset</p>
+
+                            <p>
+                                <span>Цена: </span>
+                                <span class="fw-bolder">49</span>
+                                <i class="fw-bolder bx bx-ruble text-success"></i>
+                            </p>
+                            <div class="text-center">
+                                <a class="btn btn-getstarted w-100 bi-bag-fill" href="/checkout?id=6" style="background-color: rgb(179, 0, 0); color: white;">
+                                    Купить
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="settings-content" role="tabpanel" aria-labelledby="settings-tab">
+            <h3>Настройки</h3>
+
+            <div class="fromStyle">
+                <h4>Активация ключа</h4>
+                <form id="activate-from">
+                    <div class="form-group">
+                        <label for="activation-key" class="form-label">Введите ключ активации</label>
+                        <input type="text" class="form-control" name="key" id="activation-key" placeholder="Ключ активации">
+                        <div id="activate_resoult" class="mt-2"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Активация</button>
+                </form>
+            </div>
+
+
+            <div class="change-password-form mt-4">
+                <h4>Сменить пароль</h4>
+                <form id="change_password_form">
+                    <div class="form-group">
+                        <label for="current-password" class="form-label">Текущий пароль</label>
+                        <input type="password" class="form-control" name="old_password" id="current-password" placeholder="Текущий пароль">
+                    </div>
+                    <div class="form-group">
+                        <label for="new-password" class="form-label">Новый пароль</label>
+                        <input type="password" class="form-control" name="new_password" id="new-password" placeholder="Новый пароль">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password" class="form-label">Подтвердите новый пароль</label>
+                        <input type="password" class="form-control" name="reapeat_password" id="confirm-password" placeholder="Подтвердите новый пароль">
+                    </div>
+                    <p id="result" class="text-danger"></p>
+                    <button type="submit" class="btn btn-primary">Сохранить изменения</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+<script src="vendor/aos/aos.js"></script>
+
+<script>
+
+
+    const selectTexwork = document.getElementById('selectTexwork');
+    if (selectTexwork) {
+        selectTexwork.addEventListener('change', function() {
+            var selectedValue = this.value;
+            const texWork = document.getElementById('texWork');
+            if (texWork) {
+                texWork.value = selectedValue;
+            }
+        });
+    }
+
+
+    $(document).ready(function () {
+        const texworkForm = $("#texworkID");
+        if (texworkForm.length) {
+            texworkForm.submit(function (event) {
+                event.preventDefault();
+                $.ajax({
+                    type: "POST",
+                    url: "/texworks",
+                    data: $(this).serialize(),
+                    success: function (response) {
+                        $("#texWorkResult").html(response);
+                    }
+                });
+            });
+        }
+
+
+        const giveProductForm = $("#giveProduct");
+        if (giveProductForm.length) {
+            giveProductForm.submit(function (event) {
+                event.preventDefault();
+                $.ajax({
+                    type: "POST",
+                    url: "/giveProduct",
+                    data: $(this).serialize(),
+                    success: function (response) {
+                        $("#giveProductResult").html(response);
+                    }
+                });
+            });
+        }
+
+        const giveRoleForm = $("#roleSet");
+        if (giveRoleForm.length) {
+            giveRoleForm.submit(function (event) {
+                event.preventDefault();
+                $.ajax({
+                    type: "POST",
+                    url: "/giveRole",
+                    data: $(this).serialize(),
+                    success: function (response) {
+                        $("#roleSetResult").html(response);
+                    }
+                });
+            });
+        }
+
+
+        const infoPromoForm = $("#getInfoPromo");
+        if (infoPromoForm.length) {
+            infoPromoForm.submit(function (event) {
+                event.preventDefault();
+                $.ajax({
+                    type: "POST",
+                    url: "infoPromo",
+                    data: $(this).serialize(),
+                    success: function (response) {
+                        $("#getInfoPromoResult").html(response);
+                    }
+                });
+            });
+        }
+
+        const subRemoveForm = $("#subRemove");
+        if (subRemoveForm.length) {
+            subRemoveForm.submit(function (event) {
+                event.preventDefault();
+                $.ajax({
+                    type: "POST",
+                    url: "removeSub",
+                    data: $(this).serialize(),
+                    success: function (response) {
+                        $("#subRemoveResult").html(response);
+                    }
+                });
+            });
+        }
+
+        const generateKeysForm = $("#generateKeys");
+        if (generateKeysForm.length) {
+            generateKeysForm.submit(function (event) {
+                event.preventDefault();
+                $.ajax({
+                    type: "POST",
+                    url: "/generateKeys",
+                    data: $(this).serialize(),
+                    success: function (response) {
+                        $("#generetedkeys textarea").val(response);
+                    },
+                    error: function () {
+                        alert("Ошибка при генерации ключей.");
+                    }
+                });
+            });
+        }
+
+        const resetHWIDForm = $("#resetHWID");
+        if (resetHWIDForm.length) {
+            resetHWIDForm.submit(function (event) {
+                event.preventDefault();
+                $.ajax({
+                    type: "POST",
+                    url: "/resetHWID",
+                    data: $(this).serialize(),
+                    success: function (response) {
+                        $("#resetIDResult").html(response);
+                    }
+                });
+            });
+        }
+
+
+        const resetpassDiv = $("#resetPass");
+        if (resetpassDiv.length) {
+            resetpassDiv.submit(function (event) {
+                event.preventDefault();
+                $.ajax({
+                    type: "POST",
+                    url: "/resetPass",
+                    data: $(this).serialize(),
+                    success: function (response) {
+                        $("#resetPassResult").html(response);
+                    }
+                });
+            });
+        }
+
+
+        const activateForm = $("#activate-from");
+        if (activateForm.length) {
+            activateForm.submit(function (event) {
+                event.preventDefault();
+                $.ajax({
+                    type: "POST",
+                    url: "/activate",
+                    data: $(this).serialize(),
+                    success: function (response) {
+                        $("#activate_resoult").html(response);
+                    }
+                });
+            });
+        }
+
+        const promoCreateForm = $("#promoCreate");
+        if (promoCreateForm.length) {
+            promoCreateForm.submit(function (event) {
+                event.preventDefault();
+                $.ajax({
+                    type: "POST",
+                    url: "/createPromo",
+                    data: $(this).serialize(),
+                    success: function (response) {
+                        $("#promoResult").html(response);
+                    }
+                });
+            });
+        }
+
+        const changePasswordForm = $("#change_password_form");
+        if (changePasswordForm.length) {
+            changePasswordForm.submit(function (event) {
+                event.preventDefault();
+                $.ajax({
+                    type: "POST",
+                    url: "api/change_password",
+                    data: $(this).serialize(),
+                    success: function (response) {
+                        if (response !== "OK") {
+                            $("#result").html(response);
+                        } else {
+                            $("#result").html('<p class="text-success">Пароль успешно обновлен!</p>');
+                        }
+                    }
+                });
+            });
+        }
+
+        const uploadForm = document.getElementById('uploadForm');
+        if (uploadForm) {
+            uploadForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                var formData = new FormData(uploadForm);
+                var xhr = new XMLHttpRequest();
+
+                xhr.upload.addEventListener('progress', function(e) {
+                    if (e.lengthComputable) {
+                        var percentComplete = (e.loaded / e.total) * 100;
+                        var progressBar = document.getElementById('progressBar');
+                        if (progressBar) {
+                            progressBar.style.display = 'block';
+                            progressBar.value = percentComplete;
+                        }
+                    }
+                }, false);
+
+                xhr.addEventListener('load', function() {
+                    var uploadResult = document.getElementById('uploadResult');
+                    if (uploadResult) {
+                        uploadResult.style.color = 'green';
+                        uploadResult.innerText = "Файл успешно загружен!";
+                    }
+                    var progressBar = document.getElementById('progressBar');
+                    if (progressBar) {
+                        progressBar.style.display = 'none'; // Скрываем процессбар после загрузки
+                    }
+                });
+
+                xhr.addEventListener('error', function() {
+                    var uploadResult = document.getElementById('uploadResult');
+                    if (uploadResult) {
+                        uploadResult.innerText = "Произошла ошибка при загрузке файла.";
+                    }
+                    var progressBar = document.getElementById('progressBar');
+                    if (progressBar) {
+                        progressBar.style.display = 'none';
+                    }
+                });
+
+                xhr.open('post', uploadForm.action, true);
+                xhr.send(formData);
+            });
+        }
+
+        const uploadFormJQuery = $("#uploadForm");
+        if (uploadFormJQuery.length) {
+            uploadFormJQuery.submit(function (event) {
+                event.preventDefault();
+                var formData = new FormData(this);
+
+                $.ajax({
+                    type: "post",
+                    url: "/api/uploadPost",
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function (response) {
+                        if (response !== "OK") {
+                            $("#uploadResult").html(response);
+                        } else {
+                            $("#uploadResult").html('<p class="text-success">Обновление успешно залито, подождите 30 секунд и можно будет заходить с лоадера!</p>');
+                        }
+                    }
+                });
+            });
+        }
+    });
+
+</script>
+
+<footer id="footer" class="footer">
+    <div class="container footer-top">
+        <div class="row gy-4">
+            <div class="col-lg-4 col-md-6 footer-about">
+                <a href="index.html" class="d-flex align-items-center">
+                    <span class="sitename">Exevors DLS</span>
+                </a>
+                <div class="footer-contact pt-3">
+                    <p>Продукт Exevors DLS не имеет никакого</p>
+                    <p>отношения к MojangAB.</p>
+                    <p class="mt-3"><strong>Email:</strong> <span>buy@exevorsdls.tech</span></p>
+                    <p></p>
+                </div>
+            </div>
+
+
+            <div class="col-lg-2 col-md-3 footer-links">
+                <h4>Навигация</h4>
+                <ul>
+                    <li><i class="bi bi-chevron-right"></i> <a href="index.html">Главная</a></li>
+                    <li><i class="bi bi-chevron-right"></i> <a href="eula.html">Пользовательское соглашение</a></li>
+                    <li><i class="bi bi-chevron-right"></i> <a href="cookies.html">Cookie файлы</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-12">
+                <h4>Наши соц. сети</h4>
+                <p>Здесь мы собрали все наши официальные социальные сети, мы будем очень рады вашей подписке.</p>
+                <div class="social-links d-flex">
+                    <a href="https://www.youtube.com" target="_blank"><i class="bi bi-youtube"></i></a>
+                    <a href="https://t.me" target="_blank"><i class="bi bi-telegram"></i></a>
+                    <a href="https://discord.com" target="_blank"><i class="bi bi-discord"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/glightbox.min.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/main.js"></script>
+
+
+
+
+</body></html>
